@@ -116,6 +116,9 @@ def generate_readme():
     except Exception as e:
         app.logger.error(f"Error generating README: {e}")
         return f"An error occurred: {e}", 500
+    
+print(os.getenv("PORT"))
+print("this si printitng")
 
 if __name__ == "__main__":
-    app.run(debug=False, host="0.0.0.0", port=int(os.getenv("PORT", 5000)))
+    app.run(debug=False, host="0.0.0.0", port=int(os.getenv("PORT")))
