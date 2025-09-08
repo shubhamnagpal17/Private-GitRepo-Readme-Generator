@@ -1,7 +1,7 @@
 import os
 import secrets
 from datetime import timedelta
-from flask import Flask, request, render_template, redirect, session, url_for, flash
+from flask import Flask, request, render_template, redirect, session, url_for
 from APIS.gemini import generate_readme_material
 from APIS.gitapi import fetch_repo_metadata, extract_owner_repo
 import requests
@@ -97,10 +97,6 @@ def logout():
 # Generate README
 @app.route("/generate_readme", methods=['POST'])
 def generate_readme():
-    if "access_token" not in session:   
-        flash("Please login to access private repositories.", "warning")
-        return redirect(url_for("login"))
-
     repo_url = request.form['repo_url']
     try:
         owner, repo = extract_owner_repo(repo_url)
