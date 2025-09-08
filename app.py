@@ -121,4 +121,6 @@ print(os.getenv("PORT"))
 print("this si printitng")
 
 if __name__ == "__main__":
-    app.run(debug=False, host="0.0.0.0", port=int(os.getenv("PORT")))
+    port = int(os.getenv("PORT", 5000))
+    print(f"Running on port {port}")
+    app.run(debug=False, host="0.0.0.0", port=port)
