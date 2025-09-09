@@ -1,5 +1,8 @@
 # 🤖 Private-GitRepo-Readme-Generator
 
+## 🚀 Live Demo  
+[Click here to view the app](https://private-gitrepo-readme-generator.onrender.com/)
+
 ## 💡 Description
 Automated `README.md` generation for private GitHub repositories. 🚀 This tool streamlines documentation efforts, ensuring your projects are well-explained and accessible. 📝
 
